@@ -40,11 +40,11 @@ dependencies {
 ## Usage
 1. Init SDK
 ```
-    OnePaySDK.initialize(
-       RECIPIENT_ADDRESS,
-       listOf("usdt,usdc,dai"), // supported token
-       listOf("ethereum,arbitrum,optimism,bsc") // supported network
-    )
+OnePaySDK.initialize(
+   RECIPIENT_ADDRESS,
+   listOf("usdt,usdc,dai"), // supported token
+   listOf("ethereum,arbitrum,optimism,bsc") // supported network
+)
 ```
 
 2. Use `OnePaySDK.pay` function to show pay dialog
