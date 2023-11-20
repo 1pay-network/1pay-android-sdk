@@ -4,8 +4,11 @@ apply plugin: 'signing'
 def signingProperties = new Properties()
 signingProperties.load(new FileInputStream(rootProject.file("signing.properties")))
 
-def ossrhUsername = signingProperties['ossrhUsername']
-def ossrhPassword = signingProperties['ossrhPassword']
+ext['ossrhUsername'] = signingProperties['ossrhUsername']
+ext['ossrhPassword'] = signingProperties['ossrhPassword']
+ext['signing.keyId'] = signingProperties['signing.keyId']
+ext['signing.password'] = signingProperties['signing.password']
+ext['signing.secretKeyRingFile'] = signingProperties['signing.secretKeyRingFile']
 
 task androidJavadoc(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
@@ -53,21 +56,21 @@ afterEvaluate {
 //                artifact androidJavadocJar
 //                artifact javaSourcesJar
 
-                groupId 'network.1pay'
-                version '1.0.0'
+                groupId GROUP
+                version VERSION_NAME
                 pom {
                     name = artifactId
                     description = POM_DESCRIPTION
-                    url = ''
+                    url = POM_URL
                     licenses {
                         license {
-                            name = ''
-                            url = ''
+                            name = POM_LICENCE_NAME
+                            url = POM_LICENCE_URL
                         }
                     }
                     scm {
-                        connection = 'scm:git@gitlab.com:one-pay-source/onepay-android-sdk.git'
-                        url = 'https://gitlab.com/one-pay-source/onepay-android-sdk.git'
+                        connection = POM_SCM_CONNECTION
+                        url = POM_SCM_URL
                     }
                     developers {
                         developer {

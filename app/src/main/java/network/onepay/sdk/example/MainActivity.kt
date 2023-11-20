@@ -1,14 +1,12 @@
 package network.onepay.sdk.example
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.Toast
-import network.onepay.sdk.OnePaySDK
+import androidx.appcompat.app.AppCompatActivity
+import network.onepay.sdk.*
 import network.onepay.sdk.dto.PaymentResponse
 import network.onepay.sdk.listener.OnOnePaySuccessListener
-import network.onepay.sdk.listener.SimpleOnSuccessListener
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
