@@ -3,18 +3,18 @@
   <br>
   <a href="https://1pay.network" alt="1Pay.Network" width="200"><img src="https://1pay.network/assets/dist/imgs/logo.png" alt="1Pay.Network"></a>
   <br>
-  1Pay.Network SDK
+  1PAY.network SDK
   <br>
 </h1>
 
-<h4 align="center">Android SDK for 1Pay.Network.</h4>
+<h4 align="center">Android SDK for 1PAY.network.</h4>
 
 
 ## Prerequisites
 
 * `minSdk` >= **24**
 * `kotlin-android` build tools version >= **1.8.0**
-* Crypto Ethereum address (wallet address)
+* ERC-20 wallet address
 
 ## Installation
 
