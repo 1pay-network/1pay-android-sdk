@@ -39,7 +39,7 @@ dependencies {
 
 ## Usage
 1. Init SDK
-```
+```kotlin
 OnePaySDK.initialize(
    RECIPIENT_ADDRESS,
    listOf("usdt,usdc,dai"), // supported token
@@ -48,7 +48,7 @@ OnePaySDK.initialize(
 ```
 
 2. Use `OnePaySDK.pay` function to show pay dialog
-```
+```kotlin
 OnePaySDK.pay(supportFragmentManager,
     0.1f, // amount
     "usdt", // token used for pay
@@ -69,7 +69,7 @@ You can access [documentation](https://1pay.network/documents) for another platf
 
 ## Handle result
 You can extend class `OnOnePaySuccessListener` or use our implemented class to handle result
-```
+```kotlin
 val listener = object: OnOnePaySuccessListener {
     override fun onSuccess(response: PaymentResponse) {
         // Handle success
@@ -84,12 +84,12 @@ val listener = object: OnOnePaySuccessListener {
 ## API Refences
 
 #### OnePaySDK.initialize
-```
+```kotlin
 fun initialize(recipient: String, tokens: List<String>, networks: List<String>)
 ```
 
 #### OnePaySDK.pay
-```
+```kotlin
 fun pay(
     fragmentManager: FragmentManager,
     amount: Float,
@@ -100,7 +100,7 @@ fun pay(
 ```
 
 #### PaymentResponse
-```
+```kotlin
 data class PaymentResponse(
     val hash: String?,
     val success: Boolean,
