@@ -26,12 +26,10 @@ class MainActivity : AppCompatActivity() {
                 "this is demo note",
                 object : OnOnePaySuccessListener {
                     override fun onSuccess(response: PaymentResponse) {
-//                        Log.d("OnePaySuccess", response.toString())
                         Toast.makeText(this@MainActivity, "Success", Toast.LENGTH_SHORT).show()
                     }
 
                     override fun onFailed(response: PaymentResponse) {
-//                        Log.d("OnePaySuccess", response.toString())
                         Toast.makeText(this@MainActivity, "Failed", Toast.LENGTH_SHORT).show()
                     }
                 })
