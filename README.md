@@ -112,4 +112,4 @@ data class PaymentResponse(
 ```
 
 ## LICENSE
-The Apache License, Version 2.0
+MIT
